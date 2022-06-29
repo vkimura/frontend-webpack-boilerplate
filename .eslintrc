@@ -1,5 +1,8 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
   "env": {
     "node": true,
     "jasmine": true,
@@ -20,7 +23,10 @@
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
     "import/no-unresolved": 0,
-    "import/extensions": 0
+    "import/extensions": 0,
+    "indent": ["error", 4, { 
+      "SwitchCase": 1, 
+      "offsetTernaryExpressions": true }]
   },
   "globals": {
     "browser": false,
