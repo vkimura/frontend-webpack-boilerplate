@@ -17,7 +17,10 @@ $f-c: #5f6f81;
     height: 60px;
     font-size: 13px;
     a {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        // display: block;
         height: 100%;
         color: $f-c;
         text-decoration: none;
@@ -39,11 +42,11 @@ $f-c: #5f6f81;
             letter-spacing: 1px;
             font-weight: bold;
         }
-         :after {
-            display: table;
-            clear: both;
-            content: '';
-        }
+        //  :after {
+        //     display: table;
+        //     clear: both;
+        //     content: '';
+        // }
     }
     li.gn-trigger {
         position: relative;
@@ -240,13 +243,34 @@ input.gn-search {
 //     transform: scale(0);
 //     transition: .6s ease-in-out opacity, .6s ease-in-out transform;
 // }
-// .gn-menu-wrapper.gn-open-all .gn-submenu.gn-open-sub {
+// .gn-menu-wrapper.gn-open-all .gn-submenu.gn-open-sub {.gn-menu-main
 //     display: block;
 //     transform: scale(1);
 //     opacity: 1;
 // }
 .gn-menu-wrapper.gn-open-all .gn-submenu li {
     height: 60px;
+}
+
+// .have-children span::after {
+//     position: absolute;
+//     right: 30px;
+//     content: "\f054";
+//     color: #fff;
+//     transition: all .5s;
+// }
+i.fa-angle-right {
+    position: relative;
+    right: 40px;
+    margin-left: auto;
+    transition: all .5s;
+}
+
+li.active.have-children i.fa-angle-right {
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .container>header,
