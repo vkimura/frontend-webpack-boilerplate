@@ -79,7 +79,7 @@ $f-c: #5f6f81;
     bottom: 0;
     left: 0;
     overflow: hidden;
-    width: 340px;
+    width: 60px;
     border-top: 1px solid #c6d0da;
     background-color: #fff;
     transform: translateX(-60px);
@@ -230,6 +230,17 @@ input.gn-search {
     width: 340px;
 }
 
+// .gn-menu-wrapper.gn-open-all .gn-submenu {
+//     display: none;
+//     opacity: 0;
+//     transform: scale(0);
+//     transition: .6s ease-in-out opacity, .6s ease-in-out transform;
+// }
+// .gn-menu-wrapper.gn-open-all .gn-submenu.gn-open-sub {
+//     display: block;
+//     transform: scale(1);
+//     opacity: 1;
+// }
 .gn-menu-wrapper.gn-open-all .gn-submenu li {
     height: 60px;
 }

@@ -1,6 +1,6 @@
 {
   "extends": [
-    "airbnb",
+    // "airbnb",
     "prettier"
   ],
   "env": {
@@ -21,12 +21,50 @@
     "import/no-amd": 0,
     "space-before-function-paren": 0,
     "jsx-a11y/href-no-hash": "off",
-    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "aspects": [
+          "invalidHref"
+        ]
+      }
+    ],
     "import/no-unresolved": 0,
     "import/extensions": 0,
-    "indent": ["error", 4, { 
-      "SwitchCase": 1, 
-      "offsetTernaryExpressions": true }]
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1,
+        "offsetTernaryExpressions": true
+      }
+    ],
+    "react/jsx-indent": [
+      "error",
+      4
+    ],
+    "react/jsx-indent-props": [
+      "error",
+      4
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/jsx-first-prop-new-line": [
+      "error",
+      "multiline"
+    ],
+    "quotes": [
+      "error",
+      "double",
+      "avoid-escape"
+    ]
   },
   "globals": {
     "browser": false,

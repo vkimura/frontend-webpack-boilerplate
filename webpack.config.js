@@ -38,16 +38,39 @@ module.exports = {
     },
     output: {
         filename: "js/[name].js",
+        sourceMapFilename: "js/[name].map",
         path: environment.paths.output,
     },
+    devtool: "source-map",
     module: {
         rules: [{
                 test: /\.((c|sa|sc)ss)$/i,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "postcss-loader",
-                    "sass-loader",
+                use: [{
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: true,
+                            importLoaders: 2,
+                        },
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            sourceMap: true,
+                            // plugins: [
+                            //     require("autoprefixer"),
+                            //     require("postcss-flexbugs-fixes"),
+                            // ],
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
                 ],
             },
             {
