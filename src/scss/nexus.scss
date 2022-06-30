@@ -230,6 +230,10 @@ input.gn-search {
     width: 340px;
 }
 
+.gn-menu-wrapper.gn-open-all .gn-submenu {
+    display: none;
+}
+
 // .gn-menu-wrapper.gn-open-all .gn-submenu {
 //     display: none;
 //     opacity: 0;

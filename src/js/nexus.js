@@ -3,6 +3,8 @@ import '../scss/nexus.scss';
 // Language: javascript
 // Path: src\js\nexus.js
 //# sourceMappingURL=nexus.js.map
+//ref: https://codepen.io/ivan_antic/pen/yVQKpm - Sidebar menu with icons and dropdown menu with animation
+//ref: https://codepen.io/illnino/pen/nwPBrQ - Google Nexus Website Menu
 
 //Toggles the icon sidebar menu on hover over hamburger icon
 $('.gn-icon-menu').hover(function() {
@@ -25,11 +27,13 @@ $(document).ready(function() {
 
         if (!$(this).parent().hasClass('active')) { //if the parent <li> is not active
             $('.gn-menu li ul').slideUp(); // Close all other submenus
-            $(this).next().slideToggle(); // Open the submenu
+            // $(this).next().slideToggle(); // Open the submenu
+            $(this).next().slideDown(); // Open the submenu
             $('.gn-menu li').removeClass('active'); // Remove all active classes
             $(this).parent().addClass('active'); // Add active class to the parent li
         } else {
-            $('.gn-menu li ul').slideToggle(); // Close all other submenus
+            // $('.gn-menu li ul').slideToggle(); // Close all other submenus
+            $('.gn-menu li ul').slideUp(); // Close all other submenus
             $('.gn-menu li').removeClass('active'); // Remove all active classes
         }
     });
