@@ -11,10 +11,18 @@ $('.gn-icon-menu').hover(function() {
     $('.gn-menu-wrapper').toggleClass('gn-open-part');
 });
 
+//TODO: use window.navigator.maxTouchPoints = 1 for mobile detection, window.navigator.maxTouchPoints = 0 for desktop
+
 //Expands the main sidebar menu on hover over sidebar icons
-$('.gn-menu-wrapper').hover(function() {
-    $(this).toggleClass('gn-open-all');
-});
+if (window.navigator.maxTouchPoints >= 1) { //mobile
+    $('.gn-menu-wrapper').hover(function() {
+        $(this).toggleClass('gn-open-all');
+    });
+} else { //desktop browser
+    $('.gn-menu-wrapper').click(function() {
+        $(this).toggleClass('gn-open-all');
+    });
+}
 
 // $('.gn-icon-download').hover(function() {
 //     // $(this).closest("ul").find('gn-submenu').toggleClass('gn-open-sub');
