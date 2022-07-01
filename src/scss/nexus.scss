@@ -6,6 +6,7 @@ $background-color-hover-li-items: #F4F7F9;
 $width-sidebar: 230px;
 $width-sidebar-scrollbar: calc($width-sidebar + 30px);
 $icon-angle-right: calc($width-sidebar * 0.20);
+$width-submenu: calc($width-sidebar * 0.80);
 *,
 *:after,
 *:before {
@@ -145,7 +146,7 @@ $icon-angle-right: calc($width-sidebar * 0.20);
         left: 30px;
         display: flex;
         border-radius: 13px;
-        justify-content: center;
+        justify-content: flex-start;
         width: 80%;
         line-height: $line-height-li-items;
         height: $height-li-items;
@@ -277,6 +278,7 @@ input.gn-search {
 
 .gn-menu-wrapper.gn-open-all .gn-submenu {
     display: none;
+    width: $width-submenu;
 }
 
 // .gn-menu-wrapper.gn-open-all .gn-submenu {

@@ -11,7 +11,7 @@ $('.gn-icon-menu').hover(function() {
     $('.gn-menu-wrapper').toggleClass('gn-open-part');
 });
 
-//TODO: use window.navigator.maxTouchPoints = 1 for mobile detection, window.navigator.maxTouchPoints = 0 for desktop
+//DONE: use window.navigator.maxTouchPoints = 1 for mobile detection, window.navigator.maxTouchPoints = 0 for desktop
 
 //Expands the main sidebar menu on hover over sidebar icons
 if (window.navigator.maxTouchPoints >= 1) { //mobile
