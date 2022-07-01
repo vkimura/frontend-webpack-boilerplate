@@ -3,9 +3,9 @@ $f-c: #5f6f81;
 $line-height-li-items: 2.5rem;
 $height-li-items: 50px; //40px = normal
 $background-color-hover-li-items: #F4F7F9;
-$width-sidebar: 300px;
+$width-sidebar: 230px;
 $width-sidebar-scrollbar: calc($width-sidebar + 30px);
-$icon-angle-right: calc($width-sidebar * 0.35);
+$icon-angle-right: calc($width-sidebar * 0.20);
 *,
 *:after,
 *:before {
@@ -116,7 +116,7 @@ $icon-angle-right: calc($width-sidebar * 0.35);
 .gn-scroller {
     position: absolute;
     overflow-y: scroll;
-    width: 370px;
+    width: $width-sidebar-scrollbar;
     height: 100%;
 }
 
