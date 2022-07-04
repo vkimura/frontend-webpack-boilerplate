@@ -61,5 +61,6 @@ $(document).ready(function() {
         }
     });
 
-
+    //on initial load, close all submenus
+    $('.gn-menu li ul').slideUp();
 });
