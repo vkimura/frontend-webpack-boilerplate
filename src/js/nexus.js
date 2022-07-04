@@ -14,13 +14,27 @@ $('.gn-icon-menu').hover(function() {
 //DONE: use window.navigator.maxTouchPoints = 1 for mobile detection, window.navigator.maxTouchPoints = 0 for desktop
 
 //Expands the main sidebar menu on hover over sidebar icons
-if (window.navigator.maxTouchPoints >= 1) { //mobile
+if (window.navigator.maxTouchPoints <= 1 || window.navigator.maxTouchPoints === 256) { //desktop
     $('.gn-menu-wrapper').hover(function() {
         $(this).toggleClass('gn-open-all');
     });
-} else { //desktop browser
+
+    //user's mouse leaves the menu
+    $('.gn-menu-wrapper').mouseleave(function(e) {
+        $('.gn-menu li ul').slideUp(); // Close all other submenus
+        $('.gn-menu li').removeClass('active'); // Remove all active classes
+    });
+} else { //mobile browser
     $('.gn-menu-wrapper').click(function() {
         $(this).toggleClass('gn-open-all');
+    });
+
+    //user clicks outside the menu
+    $(document).click(function(e) {
+        if (!$(e.target).closest('.gn-menu-wrapper').length) {
+            $('.gn-menu li ul').slideUp(); // Close all other submenus
+            $('.gn-menu li').removeClass('active'); // Remove all active classes
+        }
     });
 }
 
@@ -30,6 +44,7 @@ if (window.navigator.maxTouchPoints >= 1) { //mobile
 // });
 
 $(document).ready(function() {
+    //opening/closing the submenu
     $('.gn-menu > li.have-children a').click(function(e) {
         e.preventDefault();
 
@@ -45,4 +60,6 @@ $(document).ready(function() {
             $('.gn-menu li').removeClass('active'); // Remove all active classes
         }
     });
+
+
 });

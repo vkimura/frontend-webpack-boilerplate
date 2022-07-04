@@ -1,4 +1,15 @@
 // @import "compass/css3";
+:root {
+    --f-c: #5f6f81;
+    --line-height-li-items: 2.5rem;
+    --height-li-items: 50px;
+    --background-color-hover-li-items: #F4F7F9;
+    --width-sidebar: 230px;
+    --width-sidebar-scrollbar: calc(--width-sidebar + 30px);
+    --icon-angle-right: calc(--width-sidebar * 0.20);
+    --width-submenu: calc(--width-sidebar * 0.80);
+}
+
 $f-c: #5f6f81;
 $line-height-li-items: 2.5rem;
 $height-li-items: 50px; //40px = normal
